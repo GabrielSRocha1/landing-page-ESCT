@@ -668,25 +668,17 @@ h1, h2, h3 {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  padding: 16px 0;
-  background: linear-gradient(180deg, rgba(6,5,15,0.95) 0%, transparent 100%);
-  backdrop-filter: blur(10px);
-  width: 100%;
-}
-.nav-inner {
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 0 24px;
-  width: 100%;
-  box-sizing: border-box;
+  padding: 16px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  background: linear-gradient(180deg, rgba(6,5,15,0.95) 0%, transparent 100%);
+  backdrop-filter: blur(10px);
+  max-width: 480px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
 }
 .nav-logo {
   font-family: 'Cinzel', serif;
@@ -697,13 +689,16 @@ h1, h2, h3 {
 }
 .nav-badge {
   font-size: 11px;
+  background: rgba(201,162,39,0.15);
   color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  padding: 4px 10px;
+  border-radius: 20px;
   font-weight: 600;
-  letter-spacing: 1px;
 }
 
 /* &#9472;&#9472; FADE-IN ANIMATION &#9472;&#9472; */
-.nav-right{display:flex;align-items:center;gap:10px;} .lang-switch{display:flex;align-items:center;gap:2px;background:rgba(201,162,39,0.10);border:1px solid var(--gold-dim);border-radius:20px;padding:2px;} .lang-btn{background:transparent;border:none;color:var(--text-dim);font-family:inherit;font-size:11px;font-weight:600;letter-spacing:1px;padding:4px 8px;border-radius:14px;cursor:pointer;transition:all .2s ease;line-height:1;} .lang-btn:hover{color:var(--gold-light);} .lang-btn.active{background:var(--gold);color:#0A0600;} .fade-up {
+.nav-right{display:flex;align-items:center;gap:10px;} .lang-switch{display:flex;align-items:center;gap:2px;background:rgba(201,162,39,0.10);border:1px solid var(--gold-dim);border-radius:20px;padding:2px;} .lang-btn{background:transparent;border:none;color:var(--text-dim);font-family:inherit;font-size:11px;font-weight:600;letter-spacing:1px;padding:4px 8px;border-radius:14px;cursor:pointer;transition:all .2s ease;line-height:1;} .lang-btn:hover{color:var(--gold-light);} .lang-btn.active{background:var(--gold);color:#0A0600;} @media (max-width:600px){.nav-badge{display:none;}} .fade-up {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s ease, transform 0.7s ease;
@@ -716,11 +711,8 @@ h1, h2, h3 {
 /* &#9472;&#9472; RESPONSIVIDADE DESKTOP &#9472;&#9472; */
 @media (min-width: 1024px) {
   #nav {
-    padding: 24px 0;
-  }
-  .nav-inner {
-    max-width: 1100px;
-    padding: 0 40px;
+    max-width: 1200px;
+    padding: 24px 40px;
   }
   .nav-logo {
     font-size: 18px;
@@ -728,6 +720,7 @@ h1, h2, h3 {
   }
   .nav-badge {
     font-size: 13px;
+    padding: 6px 16px;
   }
   .section {
     max-width: 1100px;
@@ -942,8 +935,8 @@ h1, h2, h3 {
 
 <!-- Nav -->
 <nav id="nav">
-  <div class="nav-inner"><div class="nav-left"><span class="nav-logo">E.S.C.T</span><span class="nav-badge">ESCOTEIRO COIN</span></div>
-  <div class="nav-right"><div class="lang-switch"><button type="button" class="lang-btn" data-lang="en">EN</button><button type="button" class="lang-btn" data-lang="es">ES</button><button type="button" class="lang-btn active" data-lang="pt">PT</button></div></div></div>
+  <span class="nav-logo">E.S.C.T</span>
+  <div class="nav-right"><span class="nav-badge">ESCOTEIRO COIN</span><div class="lang-switch"><button type="button" class="lang-btn" data-lang="en">EN</button><button type="button" class="lang-btn" data-lang="es">ES</button><button type="button" class="lang-btn active" data-lang="pt">PT</button></div></div>
 </nav>
 
 <!-- HERO -->
