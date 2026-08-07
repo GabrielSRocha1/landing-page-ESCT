@@ -65,7 +65,8 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* scroll-padding compensa a altura da #nav fixa ao saltar para ancoras */
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
 
 body {
   font-family: 'Outfit', sans-serif;
@@ -754,6 +755,7 @@ h1, h2, h3 {
 
 /* &#9472;&#9472; RESPONSIVIDADE DESKTOP &#9472;&#9472; */
 @media (min-width: 1024px) {
+  html { scroll-padding-top: 104px; }
   #nav {
     padding: 24px 0;
   }
@@ -1274,7 +1276,7 @@ h1, h2, h3 {
   <a href="https://verumcrypto.com" class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:18px 32px;" data-i18n="cta.btn1">
     <span>&#128073;</span> Acessar provedores parceiros para adquirir criptoativos
   </a>
-  <a href="#" class="btn-secondary" style="width:100%;justify-content:center;" data-i18n="cta.btn2">
+  <a href="#project" class="btn-secondary" style="width:100%;justify-content:center;" data-i18n="cta.btn2">
     &#128214; Saiba mais sobre o projeto
   </a>
   <p class="cta-micro" data-i18n="cta.micro">Ao participar, você declara compreender os riscos inerentes a ativos digitais.</p>
