@@ -1,0 +1,15 @@
+# Dependências
+node_modules/
+package-lock.json
+
+# Vercel
+.vercel/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
